@@ -104,11 +104,78 @@ You should see the results in testDoc format:
 PHPUnit 9.5.13 by Sebastian Bergmann and contributors.
 
 Example (Tests\Unit\Example)
- ✔ Example
+ ✔ That true is true
 
 Example (Tests\Feature\Example)
- ✔ Example
+ ✔ The application returns a successful response
+
+User (Tests\Feature\User)
+ ✔ A user can be created
 ```
+
+## Code standard
+
+Easy Coding Standard (ECS) is used to check for style and code standards, [PSR-12](https://www.php-fig.org/psr/psr-12/) 
+is used. Regularly run code standard checks to automatically clean up your code. In particular run before committing any 
+code.
+
+To make it easy to run Easy Coding Standard (ECS) a composer script has been created in **composer.json**. From the 
+root of the projects, run:
+
+```shell script
+composer check-cs
+```
+
+You should see the results:
+
+```text
+                                                                                                                        
+ [OK] No errors found. Great job - your code is shiny in style!                                                         
+                                                                                                                        
+```
+
+If there are any warning, ECS will advise you to run --fix to fix them, this also has a composer script:
+
+```shell
+composer fix-cs
+```
+
+Sometimes the fix command needs to be run several times, as one fix will identify more problems, keep running the fix-cs 
+until you get the OK message.
+
+## Static Analysis
+
+PhpStan is used to run static analysis checks. Larastan has been installed, which is PhpStan and Laravel rules. 
+Regularly run static analysis checks to help identify problems. In particular run before committing any code.
+
+To make it easy to run PhpStan a composer script has been created in **composer.json**. From the
+root of the projects, run:
+
+```shell script
+composer check-cs
+```
+
+You should see the results:
+
+```text
+                                                                                                                        
+ [OK] No errors                                                                                                         
+                                                                                                                                                                                                                                           
+```
+
+If PhpStan identifies any problems then review and fix them one by one.
+
+## Filament
+
+To access the Filament dashboard you will need to create a filament user:
+
+```shell
+php artisan make:filament-user
+```
+
+Follow the prompts for name, email and password
+
+Once created navigate to: /admin and login. You will see the admin portal.
 
 ## Contributing
 

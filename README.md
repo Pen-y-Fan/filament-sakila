@@ -1,12 +1,12 @@
 # Filament Sakila
 
-This project has been created to practice using Filament, the Sakila database
-created [Pen-y-Fan/sakila](https://github.com/Pen-y-Fan/sakila) has been used as test data.
+This project has been created to practice using [Filament](https://filamentphp.com/docs/2.x/tables/installation), the
+Sakila database I created [Pen-y-Fan/sakila](https://github.com/Pen-y-Fan/sakila) has been used as test data.
 
 ## Requirements
 
 This is a Laravel 9 project. The requirements are the same as a
-new [Laravel 9 project](https://laravel.com/docs/8.x/installation).
+new [Laravel 9 project](https://laravel.com/docs/9.x/installation).
 
 - [8.0+](https://www.php.net/downloads.php)
 - [Composer](https://getcomposer.org)

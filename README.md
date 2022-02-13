@@ -160,10 +160,16 @@ You should see the results:
 ```text
                                                                                                                         
  [OK] No errors                                                                                                         
-                                                                                                                                                                                                                                           
+
 ```
 
 If PhpStan identifies any problems then review and fix them one by one.
+
+## Commit hook
+
+[GrumPHP](https://github.com/phpro/grumphp) has been installed and configured to run a pre-commit hook, when you 
+`git commit` any code ECS, PhpStan and PHPUnit will be automatically run, if any of these fail the commit will be 
+rejected. You can always write a rule to bypass the failing code, but it is better to fix the problem.
 
 ## Filament
 

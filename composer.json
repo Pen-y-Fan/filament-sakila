@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.0",
+        "doctrine/dbal": "^3.3",
         "filament/filament": "^2.10",
         "fruitcake/laravel-cors": "^2.0.5",
         "guzzlehttp/guzzle": "^7.2",
@@ -19,6 +20,7 @@
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",
         "nunomaduro/larastan": "2.0",
+        "phpro/grumphp-shim": "^1.8",
         "phpstan/phpstan-phpunit": "^1.0",
         "phpunit/phpunit": "^9.5.10",
         "spatie/laravel-ignition": "^1.0",

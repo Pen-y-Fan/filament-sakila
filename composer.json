@@ -16,6 +16,7 @@
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
+        "barryvdh/laravel-ide-helper": "^2.12",
         "canvural/phpstan-blade-rule": "^0.3.0",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
@@ -50,7 +51,9 @@
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
-            "@php artisan filament:upgrade"
+            "@php artisan filament:upgrade",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
@@ -63,10 +66,11 @@
         "fix-cs": "ecs check --fix --ansi",
         "phpstan": "phpstan analyse --error-format symplify --ansi",
         "lint": "parallel-lint --exclude .git --exclude node_modules --exclude storage --exclude vendor .",
+        "ide": "@php artisan ide-helper:models -W",
         "all": [
+            "@phpstan",
             "@tests",
             "@check-cs",
-            "@phpstan",
             "@lint"
         ]
     },

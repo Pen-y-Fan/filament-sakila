@@ -1,20 +1,30 @@
 includes:
-    - ./vendor/nunomaduro/larastan/extension.neon
+    - vendor/nunomaduro/larastan/extension.neon
     - vendor/phpstan/phpstan-phpunit/extension.neon
+    - vendor/symplify/phpstan-extensions/config/config.neon
+    # use with canvural/phpstan-blade-rule
+    - vendor/canvural/phpstan-blade-rule/config/extension.neon
+    - vendor/symplify/template-phpstan-compiler/config/services.neon
+    - vendor/symplify/astral/config/services.neon
 
 parameters:
-
+    templatePaths:
+        - resources/views
     paths:
         - app
         - tests
 
     # The level 9 is the highest level
-    level: 9
+    level: max
 
     ignoreErrors:
         - '#PHPDoc tag @var#'
 
     excludePaths:
-        - ./*/*/FileToBeExcluded.php
+        - ./config/*
+        - ./ecs.php
+        - ./routes/console.php
+        - ./database/factories/*
+        # - ./*/*/FileToBeExcluded.php
 
     checkMissingIterableValueType: false

@@ -16,3 +16,12 @@ indent_size = 2
 
 [docker-compose.yml]
 indent_size = 4
+
+# The indent size used in the `package.json` file cannot be changed
+# https://github.com/npm/npm/pull/3180#issuecomment-16336516
+[composer.json]
+indent_size = 4
+
+#
+[*.blade.php]
+max_line_length = 9999

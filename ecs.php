@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-// composer require --dev symplify/easy-coding-standard:^9.4.70
+// composer require --dev symplify/easy-coding-standard
 
 // symplify/easy-coding-standard
 use PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer;

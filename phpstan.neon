@@ -19,12 +19,16 @@ parameters:
 
     ignoreErrors:
         - '#PHPDoc tag @var#'
+        - message: '#Call to an undefined method Illuminate\\Database\\Schema\\ForeignIdColumnDefinition\:\:cascadeOnUpdate\(\)#'
+          paths:
+            - database\migrations\2021_11_23_224617_create_films_table.php
 
     excludePaths:
         - ./config/*
         - ./ecs.php
         - ./routes/console.php
         - ./database/factories/*
+        - ./database/seeders/*
         # - ./*/*/FileToBeExcluded.php
 
     checkMissingIterableValueType: false

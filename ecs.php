@@ -16,7 +16,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters = $containerConfigurator->parameters();
 
     // https://tomasvotruba.com/blog/introducing-up-to-16-times-faster-easy-coding-standard/
-    $parameters->set(Option::PARALLEL, true); // requires 9.4.70+
+//    $parameters->set(Option::PARALLEL, true); // requires 9.4.70+
 
     // Laravel app setup
     $parameters->set(Option::PATHS, [

@@ -85,8 +85,7 @@ This project uses models and seeders to generate the tables for the database. Te
 based on the Sakila database.
 
 ```shell
-php artisan migrate
-php artisan db:seed
+php artisan migrate --seed
 ```
 
 ## Run tests

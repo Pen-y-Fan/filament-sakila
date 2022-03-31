@@ -18,10 +18,6 @@ parameters:
     level: max
 
     ignoreErrors:
-        - '#PHPDoc tag @var#'
-        - message: '#Call to an undefined method Illuminate\\Database\\Schema\\ForeignIdColumnDefinition\:\:cascadeOnUpdate\(\)#'
-          paths:
-            - database\migrations\2021_11_23_224617_create_films_table.php
 
     excludePaths:
         - ./config/*
